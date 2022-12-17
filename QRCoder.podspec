@@ -17,14 +17,17 @@ s.source           = { :git => "https://github.com/sbhklr/QRCoder.git", :tag => 
 s.social_media_url = 'https://twitter.com/sbhklr'
 
 s.requires_arc = true
+s.watchos.source_files = 'Pod/Classes/*.swift'
 s.ios.source_files = 'Pod/Classes/*.swift'
 s.osx.source_files = 'Pod/Classes/QRCodeGenerator.swift'
 
+s.watchos.deployment_target = "2.0"
 s.ios.deployment_target = "8.0"
 s.osx.deployment_target = "10.9"
 
 s.swift_version= '4.1'
 
+s.watchos.frameworks = 'Foundation', 'UIKit', 'QuartzCore'
 s.ios.frameworks = 'Foundation', 'UIKit', 'QuartzCore'
 s.osx.frameworks = 'Foundation', 'AppKit', 'QuartzCore'
 
