@@ -48,7 +48,7 @@ class QRCoderSharedTests: XCTestCase {
     
     func messageFromImage(image:QRImage) -> String?{
                 
-        #if os(iOS)
+        #if os(iOS) || os(watchOS)
         let cgImage = image.cgImage!
         #elseif os(OSX)
         guard let cgImage = image.cgImage(forProposedRect: nil, context: nil, hints: nil) else { return nil }

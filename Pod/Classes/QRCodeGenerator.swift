@@ -8,7 +8,7 @@
 import Foundation
 import QuartzCore
 
-#if os(iOS)
+#if os(iOS) || os(watchOS)
 import UIKit
 public typealias QRColor = UIColor
 public typealias QRImage = UIImage
@@ -97,7 +97,7 @@ open class QRCodeGenerator : NSObject {
     }
     
     
-    #if os(iOS)
+    #if os(iOS) || os(watchOS)
     private func createNonInterpolatedImageFromCIImage(image:CIImage, size:CGSize) -> QRImage? {
     
         #if (arch(i386) || arch(x86_64))
